@@ -12,11 +12,11 @@ using DevFramework.Nort.Entities.Concrete;
 
 namespace DevFramework.Nort.Business.Concrete.Managers
 {
-    public class ProductManager : IProductService
+    public class ProductManager :  IProductService
     {
         private IProductDal _productDal;
 
-        ProductManager(EfProductDal productDal)
+        public ProductManager(IProductDal productDal)
         {
             _productDal = productDal;
         }

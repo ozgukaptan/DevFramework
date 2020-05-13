@@ -8,9 +8,10 @@ using FluentValidation;
 
 namespace DevFramework.Nort.Business.ValidationRules.FluentValidation
 {
-    public class ProductValidator : AbstractValidator<Product>
+    
+    public class ProductValidator : AbstractValidator<Product> 
     {
-        ProductValidator()
+        public ProductValidator()
         {
             RuleFor(p => p.CategoryID).NotEmpty();
             RuleFor(p => p.ProductName).NotEmpty();
