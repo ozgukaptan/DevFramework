@@ -68,6 +68,10 @@
       <Project>{4D2D943C-3020-40B9-91A0-F48BFC4DCEF1}</Project>
       <Name>DevFramework.Nort.Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DevFramework.Nort.Core\DevFramework.Nort.Core.csproj">
+      <Project>{5E94E89A-7DF1-474B-864D-8C13C64B2228}</Project>
+      <Name>DevFramework.Nort.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DevFramework.Nort.DataAccess\DevFramework.Nort.DataAccess.csproj">
       <Project>{21273055-A25D-4334-81BE-C8BEF1DD293B}</Project>
       <Name>DevFramework.Nort.DataAccess</Name>

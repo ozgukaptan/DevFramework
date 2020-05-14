@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevFramework.Nort.Business;
+using DevFramework.Nort.DataAccess.EntityFramework.Concrete;
 
 namespace ConsoleApp2
 {
@@ -22,6 +24,10 @@ namespace ConsoleApp2
         {
             Mock<IProductDal> mock = new Mock<IProductDal>();
             ProductManager productManager = new ProductManager(mock.Object);
+
+            IProductDal ıp;
+            //ProductManager pm = new ProductManager(ıp);
+            //pm.Add(new Product());
 
             productManager.Add(new Product());
         }

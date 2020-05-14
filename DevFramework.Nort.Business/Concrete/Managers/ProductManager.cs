@@ -29,6 +29,7 @@ namespace DevFramework.Nort.Business.Concrete.Managers
         [FluentValidationAspect(typeof(ProductValidator))]
         public Product Update(Product product)
         {
+            
             throw new NotImplementedException();
         }
         public List<Product> GetAll()
