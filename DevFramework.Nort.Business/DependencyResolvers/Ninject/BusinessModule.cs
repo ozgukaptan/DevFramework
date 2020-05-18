@@ -21,6 +21,7 @@ namespace DevFramework.Nort.Business.DependencyResolvers.Ninject
         {
             Bind<IProductService>().To<ProductManager>().InSingletonScope();
             Bind<IProductDal>().To<EfProductDal>();
+            
 
             Bind(typeof(IQueryableRepository<>)).To(typeof(EfQueryableRepository<>));
             Bind<DbContext>().To<NortContext>();

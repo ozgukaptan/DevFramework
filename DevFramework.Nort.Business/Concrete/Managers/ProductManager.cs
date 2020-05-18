@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using DevFramework.Nort.Business.Abstract;
 using DevFramework.Nort.Business.ValidationRules.FluentValidation;
 using DevFramework.Nort.Core.Aspects.Postsharp;
+using DevFramework.Nort.Core.Aspects.Postsharp.TransactionAspect;
+using DevFramework.Nort.Core.Aspects.Postsharp.ValidationAspects;
 using DevFramework.Nort.DataAccess.Abstract;
 using DevFramework.Nort.DataAccess.EntityFramework.Concrete;
 using DevFramework.Nort.Entities.Concrete;
 
 namespace DevFramework.Nort.Business.Concrete.Managers
 {
-    public class ProductManager :  IProductService
+    public class ProductManager : IProductService
     {
         private IProductDal _productDal;
 
@@ -29,7 +32,7 @@ namespace DevFramework.Nort.Business.Concrete.Managers
         [FluentValidationAspect(typeof(ProductValidator))]
         public Product Update(Product product)
         {
-            
+
             throw new NotImplementedException();
         }
         public List<Product> GetAll()
@@ -41,6 +44,34 @@ namespace DevFramework.Nort.Business.Concrete.Managers
             return _productDal.Get(p => p.ProductID == id);
         }
 
+        [TransactionScopeAspect]
+        public void TransactionalOperation(Product product1, Product product2)
+        {
+
+
+            _productDal.Add(product1);
+
+            _productDal.Add(product2);
+
+
+            //using (TransactionScope scope = new TransactionScope())
+            //{
+            //    try
+            //    {
+            //        _productDal.Add(product1);
+
+            //        _productDal.Add(product2);
+
+            //        scope.Complete();
+            //    }
+            //    catch
+            //    {
+            //        scope.Dispose();
+            //    }
+            //}
+
+
+        }
     }
 
 }
