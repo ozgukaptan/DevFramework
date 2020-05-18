@@ -25,7 +25,7 @@ namespace ConsoleApp2
             Mock<IProductDal> mock = new Mock<IProductDal>();
             ProductManager productManager = new ProductManager(mock.Object);
 
-            IProductDal ıp;
+            //IProductDal ıp;
             //ProductManager pm = new ProductManager(ıp);
             //pm.Add(new Product());
 
