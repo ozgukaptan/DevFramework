@@ -82,7 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevFramework.Nort.Business\DevFramework.Nort.Business.csproj">
-      <Project>{4D2D943C-3020-40B9-91A0-F48BFC4DCEF1}</Project>
+      <Project>{4d2d943c-3020-40b9-91a0-f48bfc4dcef1}</Project>
       <Name>DevFramework.Nort.Business</Name>
     </ProjectReference>
     <ProjectReference Include="..\DevFramework.Nort.Core\DevFramework.Nort.Core.csproj">

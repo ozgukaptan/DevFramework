@@ -14,6 +14,7 @@ using DevFramework.Nort.Core.CrossCuttingConcerns.Caching.Microsoft;
 using DevFramework.Nort.DataAccess.Abstract;
 using DevFramework.Nort.DataAccess.EntityFramework.Concrete;
 using DevFramework.Nort.Entities.Concrete;
+using DevFramework.Nort.Business;
 
 namespace DevFramework.Nort.Business.Concrete.Managers
 {

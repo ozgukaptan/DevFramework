@@ -12,7 +12,7 @@ namespace DevFramework.Nort.Core.CrossCuttingConcerns.Caching.Microsoft
     {
         protected ObjectCache Cache => MemoryCache.Default;
 
-        public void Add(string key, string data, int cacheTime = 60)
+        public void Add(string key, object data, int cacheTime = 60)
         {
             if (data == null)
             {
