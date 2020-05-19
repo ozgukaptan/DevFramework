@@ -7,8 +7,10 @@ using System.Transactions;
 using DevFramework.Nort.Business.Abstract;
 using DevFramework.Nort.Business.ValidationRules.FluentValidation;
 using DevFramework.Nort.Core.Aspects.Postsharp;
+using DevFramework.Nort.Core.Aspects.Postsharp.CacheAspects;
 using DevFramework.Nort.Core.Aspects.Postsharp.TransactionAspect;
 using DevFramework.Nort.Core.Aspects.Postsharp.ValidationAspects;
+using DevFramework.Nort.Core.CrossCuttingConcerns.Caching.Microsoft;
 using DevFramework.Nort.DataAccess.Abstract;
 using DevFramework.Nort.DataAccess.EntityFramework.Concrete;
 using DevFramework.Nort.Entities.Concrete;
@@ -25,6 +27,7 @@ namespace DevFramework.Nort.Business.Concrete.Managers
         }
 
         [FluentValidationAspect(typeof(ProductValidator))]
+        [CacheRemoveAspect(typeof(MemoryCacheManager))]
         public Product Add(Product product)
         {
             return _productDal.Add(product);
@@ -35,6 +38,7 @@ namespace DevFramework.Nort.Business.Concrete.Managers
 
             throw new NotImplementedException();
         }
+        [CacheAspect(typeof(MemoryCacheManager))] 
         public List<Product> GetAll()
         {
             return _productDal.GetList();
