@@ -15,6 +15,8 @@ using DevFramework.Nort.DataAccess.Abstract;
 using DevFramework.Nort.DataAccess.EntityFramework.Concrete;
 using DevFramework.Nort.Entities.Concrete;
 using DevFramework.Nort.Business;
+using DevFramework.Nort.Core.Aspects.Postsharp.LogAspects;
+using DevFramework.Nort.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 
 namespace DevFramework.Nort.Business.Concrete.Managers
 {
@@ -39,7 +41,9 @@ namespace DevFramework.Nort.Business.Concrete.Managers
 
             throw new NotImplementedException();
         }
-        [CacheAspect(typeof(MemoryCacheManager))] 
+        [CacheAspect(typeof(MemoryCacheManager))]
+        [LogAspect(typeof(DataBaseLogger))]
+        [LogAspect(typeof(FileLogger))]
         public List<Product> GetAll()
         {
             return _productDal.GetList();
