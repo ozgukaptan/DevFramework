@@ -7,6 +7,7 @@ using log4net;
 
 namespace DevFramework.Nort.Core.CrossCuttingConcerns.Logging.Log4Net
 {
+    [Serializable]
     public class LoggerService
     {
         private ILog _log;

@@ -41,7 +41,7 @@ namespace DevFramework.Nort.Core.Aspects.Postsharp.LogAspects
         {
             if (!_loggerService.IsInfoEnabled)
             {
-                return; ;
+                return;
             }
 
             try
