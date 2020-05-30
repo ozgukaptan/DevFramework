@@ -125,7 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="log4net.config" />
+    <Content Include="Views\log4net.config" />
     <None Include="packages.config" />
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
