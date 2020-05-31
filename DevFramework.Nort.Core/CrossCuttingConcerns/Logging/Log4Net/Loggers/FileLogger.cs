@@ -11,7 +11,6 @@ namespace DevFramework.Nort.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers
     {
         public FileLogger() : base(LogManager.GetLogger("JsonFileLogger"))
         {
-
         }
     }
 }
