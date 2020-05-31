@@ -61,8 +61,6 @@ namespace DevFramework.Nort.Core.Aspects.Postsharp.LogAspects
                 };
 
                 _loggerService.Info(logDetail);
-                _loggerService.Error(logDetail);
-                
             }
             catch (Exception)
             {

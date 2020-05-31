@@ -9,7 +9,7 @@ namespace DevFramework.Nort.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers
 {
     public class DataBaseLogger : LoggerService
     {
-        public DataBaseLogger() : base(LogManager.GetLogger("DatabaseLogger"))
+        public DataBaseLogger() : base(LogManager.GetLogger("DataBaseLogger"))
         {
         }
     }
